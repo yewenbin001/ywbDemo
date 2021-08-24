@@ -13,7 +13,7 @@ public class RegexCheckUtils {
    * @return
    */
   public static boolean isStringLengthCheck(String str, int length) {
-    if (str.length() < 4) {
+    if (str.length() < length) {
       return false;
     }
     return true;

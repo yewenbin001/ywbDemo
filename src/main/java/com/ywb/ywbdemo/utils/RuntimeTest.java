@@ -18,6 +18,9 @@ import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.Swap;
 import org.hyperic.sigar.Who;
 
+/**
+ * @author ywb
+ */
 public class RuntimeTest {
 	public static void main(String[] args) {
         try {

@@ -19,11 +19,11 @@ public class LetterConversionUtils {
         char[] charArray = lowerCaseStr.toCharArray();
         StringBuffer stringBuffer = new StringBuffer();
         for (int i = 0; i < charArray.length; i++) {
-            // 判断是否是大写字母
-            if (charArray[i] >= 65 && charArray[i] <= 90) {
-                charArray[i] += 32;
-            }
-            if (charArray[i] != '_') {
+            // 判断是否是大写字母,并且前面一个不是 _
+            if (i != 0 && charArray[i - 1] == '_') {
+                charArray[i] -= 32;
+                stringBuffer.append(charArray[i]);
+            } else if (charArray[i] != '_') {
                 stringBuffer.append(charArray[i]);
             }
         }
