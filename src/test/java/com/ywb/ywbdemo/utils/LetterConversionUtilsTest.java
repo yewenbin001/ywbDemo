@@ -8,7 +8,7 @@ class LetterConversionUtilsTest {
 
     @Test
     void toLowerCase() {
-        String s = LetterConversionUtils.toLowerCase("CONTRACT_ID\n" +
+        String s = LetterConversionUtils.toLowerCase("BID_SECTION_NAME\n" +
                 "TENDER_PROJECT_CODE\n" +
                 "BID_SECTION_CODE\n");
         System.out.println(s.toString());
