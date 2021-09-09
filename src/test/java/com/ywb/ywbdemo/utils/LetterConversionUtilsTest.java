@@ -1,6 +1,12 @@
 package com.ywb.ywbdemo.utils;
 
+import cn.hutool.core.date.DateTime;
+import org.apache.poi.ss.usermodel.DateUtil;
 import org.junit.jupiter.api.Test;
+
+import java.math.BigDecimal;
+import java.util.Calendar;
+import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,20 +14,17 @@ class LetterConversionUtilsTest {
 
     @Test
     void toLowerCase() {
-        String s = LetterConversionUtils.toLowerCase("CONTRACT_TYPE\n" +
-                "START_DATE\n" +
-                "CONSTRUCTION_PERIOD_DAYS\n" +
-                "SCALE_CONSTRUCTION\n" +
-                "BIDDER_LEGAL_CARD_TYPE\n" +
-                "BIDDER_LEGAL_SUPERVISOR_CARD_NO\n" +
-                "CONSORTIUM_NAME\n" +
-                "CONSORTIUM_CODE\n");
+        String s = LetterConversionUtils.toLowerCase("`TITLE_LEVEL`,\n" +
+                "        `TITLE_PROFESSIONAL`,\n" +
+                "        `REGISTRATION_TYPE_LEVEL`,\n" +
+                "        `PROFESSIONAL_NAME`");
         System.out.println(s.toString());
+
     }
 
     @Test
     void toUpperCase() {
-        String s1 = LetterConversionUtils.toUpperCase("agencyName");
+        String s1 = LetterConversionUtils.toUpperCase("LegalReprCardType,ContactCardType");
         System.out.println(s1);
     }
 }
